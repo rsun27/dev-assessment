@@ -3,7 +3,7 @@ import requests
 
 def fetch_refund(pin):
     try:
-        r = requests.post("http://127.0.0.1:5000/refund", json={"pin": pin}, timeout=10)
+        r = requests.post("http://127.0.0.1:5050/refund", json={"pin": pin}, timeout=10)
         if r.status_code == 200:
             return r.json().get("yearsEligible"), r.json().get("totalRefund"), ""
         else:
@@ -16,7 +16,7 @@ def fetch_refund(pin):
 
 def fetch_market(pin):
     try:
-        r = requests.get(f"http://127.0.0.1:5000/market-change?pin={pin}", timeout=10)
+        r = requests.get(f"http://127.0.0.1:5050/market-change?pin={pin}", timeout=10)
         if r.status_code == 200:
             data = r.json()
             return data["currentMarketValue"], data["previousMarketValue"], data["percentChange"], ""

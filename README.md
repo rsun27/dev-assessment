@@ -15,10 +15,10 @@ docker build -t refund-service .
 ### 2. Run the container
 
 ```bash
-docker run -p 5000:5000 refund-service
+docker run -p 5050:5000 refund-service
 ```
 
-> This runs the Flask server and exposes the API on `http://localhost:5000`
+> This runs the Flask server and exposes the API on http://localhost:5050
 
 ---
 
@@ -29,7 +29,7 @@ docker run -p 5000:5000 refund-service
 **POST** `/refund`
 
 ```bash
-curl -X POST http://localhost:5000/refund \
+curl -X POST http://localhost:5050/refund \
   -H "Content-Type: application/json" \
   -d '{"pin": "26062070090000"}'
 ```
@@ -48,7 +48,7 @@ curl -X POST http://localhost:5000/refund \
 **GET** `/market-change?pin=<PIN>`
 
 ```bash
-curl "http://localhost:5000/market-change?pin=26062070090000"
+curl "http://localhost:5050/market-change?pin=26062070090000"
 ```
 
 **Response format**:

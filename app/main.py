@@ -1,8 +1,13 @@
+import sys
+import os
+sys.path.append(os.path.abspath(os.path.dirname(__file__)))
+
+
 import pandas
 from flask import Flask, request, jsonify
 import requests
 from datetime import datetime
-from app.utils import *
+from utils import *
 
 app = Flask(__name__)
 path = "interest_rates.csv"
@@ -91,4 +96,4 @@ def market_value_change():
 
 
 if __name__ == "__main__":
-    app.run(debug=True, port=5000)
+    app.run(debug=True, host="0.0.0.0", port=5000)
