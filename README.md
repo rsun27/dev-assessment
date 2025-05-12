@@ -42,7 +42,7 @@ curl -X POST http://localhost:5000/refund \
   "totalRefund": 7043.40
 }
 ```
----
+
 ### Market Value Change Endpoint
 
 **GET** `/market-change?pin=<PIN>`
