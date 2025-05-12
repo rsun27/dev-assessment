@@ -15,10 +15,10 @@ docker build -t refund-service .
 ### 2. Run the container
 
 ```bash
-docker run -p 5050:5000 refund-service
+docker run -p 5050:5050 refund-service
 ```
 
-> This runs the Flask server inside the container on port 5000 and exposes it to your host machine at http://localhost:5050
+> This runs the Flask server inside the container and maps it to your local machine at http://localhost:5050 (port 5050 inside the container as well)
 
 ---
 
