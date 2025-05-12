@@ -11,6 +11,8 @@ This is a containerized Flask-based API service that calculates property tax ref
 ```bash
 docker build -t refund-service .
 ```
+If you see an error related to `docker-credential-desktop`, edit `~/.docker/config.json` and remove `"credsStore": "desktop"` to disable Docker credential helpers.
+
 
 ### 2. Run the container
 
